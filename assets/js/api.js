@@ -81,8 +81,8 @@ const aficherArtist = () => {
 
 
 
-    const get_track = async(dr) => {
-        let res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${dr}/top?limit=50`, {
+    const get_track = async(dr="1473902") => {
+        let res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${dr}/top?limit=100`, {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -105,8 +105,6 @@ const aficherArtist = () => {
             </audio>
             </div>
             </div>`
-            
-            console.log(e)
         })
 
         playliste_itm.innerHTML = pliy
