@@ -221,11 +221,16 @@ body {
 }
 
 .play_item {
+    cursor: pointer;
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.116);
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.play_item:hover {
+    background-color: rgba(0, 0, 0, 0.144);
 }
 
 .ply_nom {
