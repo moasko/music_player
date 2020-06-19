@@ -1,7 +1,7 @@
 const API_KEY = "0f96cb8395msh47dac3619fd0fd0p186832jsn616026525b0d"
 
 
-const ft = async(artiste) => {
+const ft = async(artiste = "arafat") => {
     let res = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${artiste}`, {
         "method": "GET",
         "headers": {
@@ -38,8 +38,8 @@ valide.onclick = () => {
     let nom = document.querySelector('#name').value
     ft(nom)
 }
-
-//afiche artiste infos
+ft()
+    //afiche artiste infos
 const aficherArtist = () => {
     const get_dom_list = document.querySelectorAll('.music_recherche_liste')
     get_dom_list.forEach(e => {
